@@ -107,7 +107,7 @@
             _calcPosition: function () {
                 if (this.x > field.w - this.r - rightPaddle.w - gapX) {
                     if(this.y + this.r > rightPaddle.y && this.y - this.r < rightPaddle.y + rightPaddle.h) {
-                        this._reverseX()
+                    this._reverseX()
                     } else {
 
                         score.increaseHuman()
@@ -118,8 +118,9 @@
                 if (this.x < this.r + leftPaddle.w + gapX) {
 
                     if(this.y + this.r > leftPaddle.y && this.y - this.r < leftPaddle.y + leftPaddle.h) {
-                        this._reverseX()
+                    this._reverseX()
                     } else {
+
                         score.increaseComputer()
                         this._pointUp()
                     }
@@ -139,7 +140,7 @@
                 this.directionY *= -1
             },
             _speedUp: function () {
-                this.speed += 2 
+                this.speed += 3 
             },
             _pointUp: function () {
                 this._speedUp()
